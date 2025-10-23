@@ -1,0 +1,49 @@
+name: PR
+
+on:
+  push:
+    branches:
+      - feat/opensearch-init
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    services:
+      opensearch:
+        image: opensearchproject/opensearch:3.0.0
+        ports:
+          - 9200:9200
+        env:
+          discovery.type: single-node
+          plugins.security.disabled: "true"
+          DISABLE_SECURITY_PLUGIN: "true"
+          DISABLE_INSTALL_DEMO_CONFIG: "true"
+          cluster.routing.allocation.disk.watermark.low: "95%"
+          cluster.routing.allocation.disk.watermark.high: "97%"
+          cluster.routing.allocation.disk.watermark.flood_stage: "98%"
+        options: >-
+          --health-cmd="curl -fsS http://localhost:9200 >/dev/null || exit 1"
+          --health-interval=3s
+          --health-retries=40
+          --health-timeout=3s
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install deps
+        run: uv sync
+
+      - name: Create index
+        env:
+          OS_HOST: "http://localhost:9200"
+        run: |
+          # Ensure your package imports work when running a script directly
+          export PYTHONPATH="$PWD"
+          uv run python scripts/create_index.py

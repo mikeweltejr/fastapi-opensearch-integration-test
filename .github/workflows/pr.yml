@@ -16,7 +16,6 @@ jobs:
           - 9200:9200
         env:
           discovery.type: single-node
-          plugins.security.disabled: "true"
           DISABLE_SECURITY_PLUGIN: "true"
           DISABLE_INSTALL_DEMO_CONFIG: "true"
           cluster.routing.allocation.disk.watermark.low: "95%"

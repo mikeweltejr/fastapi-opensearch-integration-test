@@ -37,7 +37,7 @@ jobs:
           enable-cache: true
 
       - name: Install deps
-        run: uv sync
+        run: uv sync --extra test
 
       - name: Create index
         env:

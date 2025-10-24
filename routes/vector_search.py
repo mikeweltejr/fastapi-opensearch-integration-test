@@ -22,6 +22,6 @@ def get_client() -> OpenSearch:
         retry_on_timeout=True,
     )
 
-@router.post("/retrieve-vector", tags=["retrieve"])
+@router.post("/vector-search", tags=["retrieve"])
 def search(req: RetrieveRequest, client: OpenSearch = Depends(get_client)):
     return search_books_vector(client, req)

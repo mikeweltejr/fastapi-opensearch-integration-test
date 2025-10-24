@@ -39,10 +39,6 @@ def create_index(client: OpenSearch, index: str, schema: dict) -> None:
     client.indices.create(index=index, body=schema)
 
 def generate_actions(filepath: str, index_name: str) -> Generator[Dict, None, None]:
-    """
-    Read a bulk-ready NDJSON file (alternating action/doc lines) and yield
-    actions usable by opensearchpy.helpers.bulk. We always index into `index_name`.
-    """
     with open(filepath, "r", encoding="utf-8") as f:
         while True:
             action_line = f.readline()
@@ -88,10 +84,6 @@ def generate_actions(filepath: str, index_name: str) -> Generator[Dict, None, No
             yield action
 
 def index_ndjson(filepath: str, index_name: str, refresh: bool = True) -> tuple[int, int]:
-    """
-    Bulk index all actions from the NDJSON file into `index_name`.
-    Returns (success_count, error_count).
-    """
     client = get_client()
     success, errors = bulk(client, generate_actions(filepath, index_name), request_timeout=60)
     if refresh:

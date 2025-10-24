@@ -10,3 +10,14 @@ dependencies = [
     "opensearch-py>=3.0.0",
     "uvicorn[standard]>=0.38.0",
 ]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-asyncio",
+  "httpx",           # async HTTP client
+  "asyncio",
+]
+
+[project.scripts]
+test-integration = "pytest -q"

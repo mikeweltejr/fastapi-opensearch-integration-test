@@ -12,5 +12,16 @@ services:
     volumes:
       - opensearch-data:/usr/share/opensearch/data
 
+  api:
+    build: .
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    environment:
+      - OS_HOST=http://opensearch:9200   # container-to-container DNS
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
 volumes:
   opensearch-data:

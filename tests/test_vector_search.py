@@ -37,7 +37,7 @@ async def test_vector_search_with_author_filter(client):
 async def test_bad_isbn_rejected(client):
     payload = {
         "query": "anything",
-        "filters": {"isbn": "bad-isbn"},  # your validator should 422 this
+        "filters": {"isbn": "bad-isbn"},
         "size": 1,
         "num_candidates": 10
     }

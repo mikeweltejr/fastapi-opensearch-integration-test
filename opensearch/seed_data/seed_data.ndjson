@@ -1,0 +1,40 @@
+{ "index": { "_index": "books", "_id": "9780000000001-1" } }
+{ "id": "9780000000001-1", "isbn": "9780000000001", "chapter": 1, "title": "Orbital Shadows", "chunk_text": "Orbital Shadows — Chapter 1. The corridor hummed with a soft resonance.", "author": "Alex Stone", "category": "scifi", "vector": [0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08] }
+{ "index": { "_index": "books", "_id": "9780000000001-2" } }
+{ "id": "9780000000001-2", "isbn": "9780000000001", "chapter": 2, "title": "Orbital Shadows", "chunk_text": "Orbital Shadows — Chapter 2. A thin veil of dust floated in the beam of light.", "author": "Alex Stone", "category": "scifi", "vector": [0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09] }
+{ "index": { "_index": "books", "_id": "9780000000001-3" } }
+{ "id": "9780000000001-3", "isbn": "9780000000001", "chapter": 3, "title": "Orbital Shadows", "chunk_text": "Orbital Shadows — Chapter 3. Footsteps faded into the metallic hush.", "author": "Alex Stone", "category": "scifi", "vector": [0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10] }
+{ "index": { "_index": "books", "_id": "9780000000001-4" } }
+{ "id": "9780000000001-4", "isbn": "9780000000001", "chapter": 4, "title": "Orbital Shadows", "chunk_text": "Orbital Shadows — Chapter 4. Old maps hinted at hidden passages.", "author": "Alex Stone", "category": "scifi", "vector": [0.04,0.05,0.06,0.07,0.08,0.09,0.10,0.11] }
+{ "index": { "_index": "books", "_id": "9780000000002-1" } }
+{ "id": "9780000000002-1", "isbn": "9780000000002", "chapter": 1, "title": "Crimson Hollow", "chunk_text": "Crimson Hollow — Chapter 1. The corridor hummed with a soft resonance.", "author": "Jordan Rivera", "category": "horror", "vector": [0.06,0.01,0.05,0.02,0.07,0.03,0.08,0.04] }
+{ "index": { "_index": "books", "_id": "9780000000002-2" } }
+{ "id": "9780000000002-2", "isbn": "9780000000002", "chapter": 2, "title": "Crimson Hollow", "chunk_text": "Crimson Hollow — Chapter 2. A thin veil of dust floated in the beam of light.", "author": "Jordan Rivera", "category": "horror", "vector": [0.07,0.02,0.06,0.03,0.08,0.04,0.09,0.05] }
+{ "index": { "_index": "books", "_id": "9780000000002-3" } }
+{ "id": "9780000000002-3", "isbn": "9780000000002", "chapter": 3, "title": "Crimson Hollow", "chunk_text": "Crimson Hollow — Chapter 3. Footsteps faded into the metallic hush.", "author": "Jordan Rivera", "category": "horror", "vector": [0.08,0.03,0.07,0.04,0.09,0.05,0.10,0.06] }
+{ "index": { "_index": "books", "_id": "9780000000002-4" } }
+{ "id": "9780000000002-4", "isbn": "9780000000002", "chapter": 4, "title": "Crimson Hollow", "chunk_text": "Crimson Hollow — Chapter 4. Old maps hinted at hidden passages.", "author": "Jordan Rivera", "category": "horror", "vector": [0.09,0.04,0.08,0.05,0.10,0.06,0.11,0.07] }
+{ "index": { "_index": "books", "_id": "9780000000003-1" } }
+{ "id": "9780000000003-1", "isbn": "9780000000003", "chapter": 1, "title": "Silent Cipher", "chunk_text": "Silent Cipher — Chapter 1. The corridor hummed with a soft resonance.", "author": "Taylor M. Ng", "category": "mystery", "vector": [0.02,0.06,0.01,0.05,0.03,0.07,0.04,0.08] }
+{ "index": { "_index": "books", "_id": "9780000000003-2" } }
+{ "id": "9780000000003-2", "isbn": "9780000000003", "chapter": 2, "title": "Silent Cipher", "chunk_text": "Silent Cipher — Chapter 2. A thin veil of dust floated in the beam of light.", "author": "Taylor M. Ng", "category": "mystery", "vector": [0.03,0.07,0.02,0.06,0.04,0.08,0.05,0.09] }
+{ "index": { "_index": "books", "_id": "9780000000003-3" } }
+{ "id": "9780000000003-3", "isbn": "9780000000003", "chapter": 3, "title": "Silent Cipher", "chunk_text": "Silent Cipher — Chapter 3. Footsteps faded into the metallic hush.", "author": "Taylor M. Ng", "category": "mystery", "vector": [0.04,0.08,0.03,0.07,0.05,0.09,0.06,0.10] }
+{ "index": { "_index": "books", "_id": "9780000000003-4" } }
+{ "id": "9780000000003-4", "isbn": "9780000000003", "chapter": 4, "title": "Silent Cipher", "chunk_text": "Silent Cipher — Chapter 4. Old maps hinted at hidden passages.", "author": "Taylor M. Ng", "category": "mystery", "vector": [0.05,0.09,0.04,0.08,0.06,0.10,0.07,0.11] }
+{ "index": { "_index": "books", "_id": "9780000000004-1" } }
+{ "id": "9780000000004-1", "isbn": "9780000000004", "chapter": 1, "title": "Echoes of a Life", "chunk_text": "Echoes of a Life — Chapter 1. The corridor hummed with a soft resonance.", "author": "R. Lee Patel", "category": "biography", "vector": [0.08,0.05,0.02,0.06,0.01,0.07,0.03,0.04] }
+{ "index": { "_index": "books", "_id": "9780000000004-2" } }
+{ "id": "9780000000004-2", "isbn": "9780000000004", "chapter": 2, "title": "Echoes of a Life", "chunk_text": "Echoes of a Life — Chapter 2. A thin veil of dust floated in the beam of light.", "author": "R. Lee Patel", "category": "biography", "vector": [0.09,0.06,0.03,0.07,0.02,0.08,0.04,0.05] }
+{ "index": { "_index": "books", "_id": "9780000000004-3" } }
+{ "id": "9780000000004-3", "isbn": "9780000000004", "chapter": 3, "title": "Echoes of a Life", "chunk_text": "Echoes of a Life — Chapter 3. Footsteps faded into the metallic hush.", "author": "R. Lee Patel", "category": "biography", "vector": [0.10,0.07,0.04,0.08,0.03,0.09,0.05,0.06] }
+{ "index": { "_index": "books", "_id": "9780000000004-4" } }
+{ "id": "9780000000004-4", "isbn": "9780000000004", "chapter": 4, "title": "Echoes of a Life", "chunk_text": "Echoes of a Life — Chapter 4. Old maps hinted at hidden passages.", "author": "R. Lee Patel", "category": "biography", "vector": [0.11,0.08,0.05,0.09,0.04,0.10,0.06,0.07] }
+{ "index": { "_index": "books", "_id": "9780000000005-1" } }
+{ "id": "9780000000005-1", "isbn": "9780000000005", "chapter": 1, "title": "Starlit Hearts", "chunk_text": "Starlit Hearts — Chapter 1. The corridor hummed with a soft resonance.", "author": "Casey Kim", "category": "romance", "vector": [0.05,0.04,0.07,0.01,0.06,0.02,0.08,0.03] }
+{ "index": { "_index": "books", "_id": "9780000000005-2" } }
+{ "id": "9780000000005-2", "isbn": "9780000000005", "chapter": 2, "title": "Starlit Hearts", "chunk_text": "Starlit Hearts — Chapter 2. A thin veil of dust floated in the beam of light.", "author": "Casey Kim", "category": "romance", "vector": [0.06,0.05,0.08,0.02,0.07,0.03,0.09,0.04] }
+{ "index": { "_index": "books", "_id": "9780000000005-3" } }
+{ "id": "9780000000005-3", "isbn": "9780000000005", "chapter": 3, "title": "Starlit Hearts", "chunk_text": "Starlit Hearts — Chapter 3. Footsteps faded into the metallic hush.", "author": "Casey Kim", "category": "romance", "vector": [0.07,0.06,0.09,0.03,0.08,0.04,0.10,0.05] }
+{ "index": { "_index": "books", "_id": "9780000000005-4" } }
+{ "id": "9780000000005-4", "isbn": "9780000000005", "chapter": 4, "title": "Starlit Hearts", "chunk_text": "Starlit Hearts — Chapter 4. Old maps hinted at hidden passages.", "author": "Casey Kim", "category": "romance", "vector": [0.08,0.07,0.10,0.04,0.09,0.05,0.11,0.06] }

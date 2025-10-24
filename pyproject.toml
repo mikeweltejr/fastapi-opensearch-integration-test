@@ -1,0 +1,23 @@
+[project]
+name = "fastapi-opensearch-integration-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "fastapi>=0.119.1",
+    "fastembed>=0.7.3",
+    "opensearch-py>=3.0.0",
+    "uvicorn[standard]>=0.38.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-asyncio",
+  "httpx",           # async HTTP client
+  "asyncio",
+]
+
+[project.scripts]
+test-integration = "pytest -q"

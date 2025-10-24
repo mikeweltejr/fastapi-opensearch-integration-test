@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  integration-tests:
+    runs-on: ubuntu-latest
+
+    services:
+      opensearch:
+        image: opensearchproject/opensearch:3.0.0
+        ports:
+          - 9200:9200
+        env:
+          discovery.type: single-node
+          DISABLE_SECURITY_PLUGIN: "true"
+          DISABLE_INSTALL_DEMO_CONFIG: "true"
+          cluster.routing.allocation.disk.watermark.low: "95%"
+          cluster.routing.allocation.disk.watermark.high: "97%"
+          cluster.routing.allocation.disk.watermark.flood_stage: "98%"
+        options: >-
+          --health-cmd="curl -fsS http://localhost:9200 >/dev/null || exit 1"
+          --health-interval=3s
+          --health-retries=40
+          --health-timeout=3s
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install deps
+        run: uv sync --extra test
+
+      - name: Create index
+        env:
+          OS_HOST: "http://localhost:9200"
+        run: |
+          # Ensure your package imports work when running a script directly
+          export PYTHONPATH="$PWD"
+          uv run python scripts/create_index.py
+
+      - name: Start FastAPI (background)
+        env:
+          OS_HOST: "http://localhost:9200"
+        run: |
+          set -e
+          uv run uvicorn main:app --host 0.0.0.0 --port 8000 > server.log 2>&1 &
+          echo $! > uvicorn.pid
+          for i in {1..60}; do
+            if curl -fsS "http://127.0.0.1:8000/health" >/dev/null; then
+              echo "FastAPI is up"
+              break
+            fi
+            sleep 1
+          done
+
+      - name: Run Integration Tests
+        run: uv run pytest -q
+
+      - name: Stop FastAPI
+        if: always()
+        run: |
+          if [ -f uvicorn.pid ]; then kill "$(cat uvicorn.pid)" || true; fi
